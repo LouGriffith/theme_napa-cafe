@@ -104,3 +104,13 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+function google_fonts() {
+  $query_args = array(
+    'family' => 'Lato|Josefin+Slab:700',
+    'subset' => 'latin,latin-ext',
+  );
+  wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+            }
+            
+add_action('wp_enqueue_scripts', 'google_fonts');
