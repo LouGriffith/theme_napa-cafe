@@ -11,25 +11,24 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-    font-weight:700;
+    font-weight:300;
     font-size: ms(4);
     color: #3c3c3c;
 }
 
 h2 {
-    font-weight:700;
+    font-weight:300;
     font-size: ms(3);
     color: #3c3c3c;
 }
 
 h3 {
-    font-weight:700;
+    font-weight:300;
     font-size: ms(2);
     color: #3c3c3c;
 }
 
 p {
-    font-weight:400;
     font-size: ms(0);
    	line-height: ms(0) * $line-height;
     color: #3c3c3c;

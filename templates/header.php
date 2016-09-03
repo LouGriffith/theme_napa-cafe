@@ -3,24 +3,42 @@
   // somewhere in your theme.
 ?>
 
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+<header>
+
+  <div class="header-bar">
+    <a class="brand" href="<?= esc_url(home_url('/')); ?>">
+      <i class="icon-napa-sm-logo"></i>
+      <span><?php bloginfo('name'); ?></span>
+    </a>
+
+    <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+      <div class="button">
+        <span class="hamb"></span>
+        <span class="hamb"></span>
+        <span class="hamb"></span>      
+        <span class="hamb"></span>
+        <span class="hamb"></span>
+        <span class="hamb"></span>
         <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      </div>
+    </button>
+  </div>
+
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <div class="sidebar-brand">
+      <div class="brand" href="<?= esc_url(home_url('/')); ?>">
+        <i class="icon-napa-logo"></i>
+        <span><?php bloginfo('name'); ?></span>
+      </div>
     </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
+    <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav sidebar-nav']);
       endif;
-      ?>
+    ?>
     </nav>
-  </div>
 </header>
+

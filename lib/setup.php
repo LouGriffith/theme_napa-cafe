@@ -9,7 +9,7 @@ use Roots\Sage\Assets;
  */
 
 // Google Fonts
-  define("GOOGLE_FONTS",  "Josefin+Slab:700|Lato");
+  define("GOOGLE_FONTS",  "Josefin+Slab:300|Lato");
 
 function setup() {
   // Enable features from Soil when plugin is activated
