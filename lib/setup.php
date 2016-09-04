@@ -7,6 +7,10 @@ use Roots\Sage\Assets;
 /**
  * Theme setup
  */
+
+// Google Fonts
+  define("GOOGLE_FONTS",  "Josefin+Slab:300|Lato");
+
 function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/

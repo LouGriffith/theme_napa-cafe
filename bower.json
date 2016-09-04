@@ -32,5 +32,8 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
     }
+  },
+  "devDependencies": {
+    "modular-scale": "^2.1.3"
   }
 }
