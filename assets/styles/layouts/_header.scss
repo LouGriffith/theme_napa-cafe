@@ -1,0 +1,45 @@
+.header-bar{
+	position: relative;
+	top: 0px; 
+	z-index: 999;
+	top: 1em;
+
+	.brand{
+		position: relative;
+		outline: none;
+		float: left;
+    	padding: .5em 1em;
+    	height: 4.25em;
+		background: #ddd;
+    	padding-left: 5.25em;
+    	left: 0;
+
+    	  -webkit-transition: .4s ease-out;
+  		-moz-transition: .4s ease-out;
+  		-o-transition: .4s ease-out;
+  		transition: .4s ease-out;
+
+    	transition-delay: .05s;
+
+
+		span{
+			display: none;
+		}
+
+		i{
+		    font-size: 5.5em;
+		    line-height: .6em;
+		}
+
+		&:hover,
+		&:focus{
+			text-decoration: none;
+		}
+
+		.toggled &{
+			left: -15em;
+		}
+	}
+
+
+}

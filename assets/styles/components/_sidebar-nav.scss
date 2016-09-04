@@ -188,15 +188,15 @@ html { height: 100%;}
 /*       Hamburger-Cross         */
 /*-------------------------------*/
 	button.hamburger{
-	  	position: fixed;
-	  	top: 20px; 
-	  	z-index: 999;
 	  	display: block;
 	  	padding: 1em;
 
 	  	background: $sidebar-background;
 	  	border: none;
 		outline: none;
+		position: fixed;
+		top: 1em;
+		z-index: 30;
 	}
 
 	.hamburger .button{
