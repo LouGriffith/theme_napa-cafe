@@ -27,21 +27,12 @@ html { height: 100%;}
 
 	#sidebar-wrapper {
 	    z-index: 1000;
-	    left: $sidebar-width;
-	    width: 0;
+	    width: 300px;
 	    height: 100%;
-	    margin-left: -$sidebar-width;
 	    overflow-y: auto;
 	    overflow-x: hidden;
 	    background: $sidebar-background;
 	    transition: all 0.5s ease;
-
-	    @media (max-width: $screen-sm-max) {
-			left: inherit;
-			right: $sidebar-width;
-			margin-left: 0;
-			margin-right: -$sidebar-width;
-		}
 
 	   	div.admin-bar &{
 	  		top: 28px;
@@ -57,29 +48,31 @@ html { height: 100%;}
 	    padding-top: 70px;
 	}
 
-	#wrapper.toggled{
-		padding-left: $sidebar-width;
+	.wrap.container{
+		// position: relative;
+		// transform: translateX(0);
+		// transition: .3s ease all;
+	}
 
-		@media (max-width: $screen-sm-max) {
-			padding-left: 0;
-			margin-left: -$sidebar-width;
+	.wrap.container.toggled{
+		// transform: translateX(300px);
+		// transition: .3s ease all;
 
-		}
+		// @media (max-width: $screen-sm-max) {
+		// 	padding-left: 0;
+		// 	transform: translateX(-300px);
+		// 	transition: .3s ease all;
 
-		#sidebar-wrapper {
-		    width: $sidebar-width;
-		}
+		// }
 
-		#page-content-wrapper {
-		    position: absolute;
-		    margin-right: -$sidebar-width;
+		// #sidebar-wrapper {
+		//     width: $sidebar-width;
+		// }
 
-		   	@media (max-width: $screen-sm-max) {
-				margin-right: 0;
-		    	margin-left: -$sidebar-width;
-			}
+		// #page-content-wrapper {
 
-		}
+
+		// }
 	}
 
 
@@ -151,7 +144,6 @@ html { height: 100%;}
 			    text-transform: uppercase;
     			text-align: center;
     			border-right: 5px solid $sidebar-background;
-    			border-bottom: 1px solid #313539;
 			}
 
 			a:hover, 
@@ -195,8 +187,13 @@ html { height: 100%;}
 	  	border: none;
 		outline: none;
 		position: fixed;
-		top: 1em;
 		z-index: 30;
+
+		@media (max-width: $screen-sm-max) {
+			right: -1px;
+	  		transform: translate3d(0,0,0);
+		  	transition: all .5s ease;
+		}
 	}
 
 	.hamburger .button{
@@ -220,7 +217,7 @@ html { height: 100%;}
 		position: absolute;
     	height: 4px;
     	width: 50%;
-		background: #d3531a;
+		background: #fff;
 		opacity: 1;
 		
 		-webkit-transform: rotate(0deg);
