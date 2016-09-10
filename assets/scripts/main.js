@@ -71,36 +71,6 @@
     }
   };
 
-  // hamburger sidemenu
-  var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
-
-    trigger.click(function () {
-      hamburger_cross();      
-    });
-
-    function hamburger_cross() {
-
-      if (isClosed === true) {          
-        overlay.removeClass('shown');
-        overlay.addClass('hidden');
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-      } else {   
-        overlay.removeClass('hidden');
-        overlay.addClass('shown');
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
-  }
-  
-  $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-  });
-
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
