@@ -28,3 +28,27 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
+function addBootstrapToCheckoutFields($fields) {
+    foreach ($fields as &$fieldset) {
+        foreach ($fieldset as &$field) {
+            // if you want to add the form-group class around the label and the input
+            $field['class'][] = 'form-group'; 
+
+            // add form-control to the actual input
+            $field['input_class'][] = 'form-control';
+        }
+    }
+    return $fields;
+}
+
+add_action( 'wp_enqueue_scripts', 'agentwp_dequeue_stylesandscripts', 100 );
+function agentwp_dequeue_stylesandscripts() {
+  if ( class_exists( 'woocommerce' ) ) {
+    wp_dequeue_style( 'select2' );
+    wp_deregister_style( 'select2' );
+    wp_dequeue_script( 'select2');
+    wp_deregister_script('select2');
+  }
+}
