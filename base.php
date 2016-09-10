@@ -10,6 +10,14 @@ use Roots\Sage\Wrapper;
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
     <div id="wrapper">
+      <?php 
+        // check if the post has a Post Thumbnail assigned to it.
+        if ( has_post_thumbnail() ) { ?>
+          <div class="background-img">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        <?php } 
+      ?>
       <div class="overlay"></div>
       <!--[if IE]>
         <div class="alert alert-warning">
@@ -20,7 +28,7 @@ use Roots\Sage\Wrapper;
         do_action('get_header');
         get_template_part('templates/header');
       ?>
-      <div class="wrap container" role="document">
+      <div class="wrap container <?php if ( has_post_thumbnail() ) { ?>has-image<?php } ?>" role="document">
         <div class="content row">
           <main class="main">
             <?php include Wrapper\template_path(); ?>
