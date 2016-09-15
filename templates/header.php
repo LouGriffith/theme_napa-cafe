@@ -12,13 +12,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
+        <span class="brand-name"><?php bloginfo('name'); ?></span>
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/nato-training.svg" alt="<?php bloginfo('name'); ?>">
+      </a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :
         wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
+      endif;
+      ?>
+
+      <?php
+      if (has_nav_menu('secondary_navigation')) :
+        wp_nav_menu(['theme_location' => 'secondary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav navbar-right']);
       endif;
       ?>
     </nav>

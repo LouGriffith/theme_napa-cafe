@@ -1,0 +1,92 @@
+// NATO Font
+
+@font-face {
+  font-family: 'Gothambold';
+  src: url('#{$font-path}/gothambold.eot'); /* IE9 Compat Modes */
+  src: url('#{$font-path}/gothambold.eot?#FooAnything') format('embedded-opentype'), /* IE6-IE8 */
+     url('#{$font-path}/gothambold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothambook';
+  src: url('#{$font-path}/gothambook.eot'); /* IE9 Compat Modes */
+  src: url('#{$font-path}/gothambook.eot?#FooAnything') format('embedded-opentype'), /* IE6-IE8 */
+     url('#{$font-path}/gothambook.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothambold';
+  src: url('#{$font-path}/gothamlight.eot'); /* IE9 Compat Modes */
+  src: url('#{$font-path}/gothamlight.eot?#FooAnything') format('embedded-opentype'), /* IE6-IE8 */
+     url('#{$font-path}/gothamlight.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothammedium';
+  src: url('#{$font-path}/gothammedium.eot'); /* IE9 Compat Modes */
+  src: url('#{$font-path}/gothammedium.eot?#FooAnything') format('embedded-opentype'), /* IE6-IE8 */
+     url('#{$font-path}/gothammedium.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family:"Gothambook", Arial, Helvetica, sans-serif;
+  color: #444;
+}
+
+h1{
+  font-family:"Gothammedium", Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+}
+
+h2{
+  font-family:"Gothambold", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+h3{
+  font-family:"Gothambold", Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+}
+
+h3{
+  font-family:"Gothambold", Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+h5{
+  font-family:"Gothammedium", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+strong{
+  font-family:"Gothambold", Arial, Helvetica, sans-serif;
+}
+
+p{
+  margin-bottom: 1.4em;
+  line-height: 1.8em;
+}
+
+a{
+
+  &:hover{
+  }
+}
+
+blockquote{
+  font-size: 1em;
+}
+
+.centered{
+  text-align: center;
+}

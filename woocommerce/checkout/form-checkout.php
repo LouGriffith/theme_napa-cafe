@@ -39,13 +39,8 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col-sm-6" id="customer_details">
-			<div class="col-sm-12">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-			</div>
-
-			<div class="col-sm-12">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
+			<?php do_action( 'woocommerce_checkout_billing' ); ?>
+			<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>

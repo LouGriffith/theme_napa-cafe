@@ -1,4 +1,6 @@
-<?php
+
+
+	<?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
@@ -41,7 +43,7 @@
 				<?php woocommerce_product_subcategories(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part('templates/page', 'header'); ?>
+
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
