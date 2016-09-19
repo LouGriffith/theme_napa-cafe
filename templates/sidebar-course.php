@@ -1,1 +1,1 @@
-<?php dynamic_sidebar('sidebar-course'); ?>
+<?php dynamic_sidebar('sidebar-lesson'); ?>

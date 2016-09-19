@@ -28,8 +28,8 @@ use Roots\Sage\Wrapper;
         do_action('get_header');
         get_template_part('templates/header');
       ?>
-      <div class="wrap container <?php if ( has_post_thumbnail() ) { ?>has-image<?php } ?>" role="document">
-        <div class="content row">
+      <div class="wrap <?php if ( has_post_thumbnail() ) { ?>has-image<?php } ?>" role="document">
+        <div class="content">
           <main class="main">
             <?php include Wrapper\template_path(); ?>
           </main><!-- /.main -->

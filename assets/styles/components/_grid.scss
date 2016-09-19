@@ -5,6 +5,31 @@
     @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   }
 }
+
+// Grid system
+.sidebar-primary {
+  .wrap {
+    @include container-fixed();
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+
+    .content {
+      @include make-row();
+
+      .main {
+        @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+      }
+    }
+  }
+}
+
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }

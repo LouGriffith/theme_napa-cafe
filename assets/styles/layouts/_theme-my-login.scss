@@ -1,0 +1,53 @@
+.tml{
+	max-width: 320px;
+
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.message-style{
+		color: #333;
+		padding: 0.5em;
+	}
+
+	.error{
+		@extend .message-style;
+	}
+
+	.message{
+		@extend .message-style;
+	}
+
+	p{
+		margin: 0 0 1.5em 0;
+		padding: 0;
+	}
+
+	label {
+		display: block;
+		text-align: left;
+	}
+
+	.tml-rememberme-wrap label {
+		display: inline;
+	}
+
+	.input-style{
+		margin: 0.5em 0;
+		width: 100%;
+	}
+
+	input{
+		@extend .input-style;
+	}
+
+	textarea{
+		@extend .input-style;
+	}
+
+	select{
+		@extend .input-style;
+	}
+

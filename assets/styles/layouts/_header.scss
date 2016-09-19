@@ -9,3 +9,34 @@
 		width: 80%;
 	}
 }
+
+.navbar-toggle{
+	margin-right: 10px;
+	position: absolute;
+	right: 0;
+}
+
+.navbar-non-member{
+	hr{
+		display: none;
+	}
+	.btn-success{
+		margin-right: 1em;
+	}
+
+	.glyphicon{
+		top: .2em;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		hr{
+			display: block;
+		}
+	    .btn{
+	    	display: block;
+	    	margin: .5em;
+	    	font-size: 1.15em;
+	    }
+
+	}
+}

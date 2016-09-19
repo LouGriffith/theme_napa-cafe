@@ -9,6 +9,8 @@
 @import "common/typography";
 
 @import "components/buttons";
+@import "components/cards";
+
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
@@ -17,7 +19,9 @@
 
 @import "layouts/header";
 @import "layouts/sidebar";
+@import "layouts/frontpage";
 @import "layouts/footer";
+@import "layouts/learndash";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";

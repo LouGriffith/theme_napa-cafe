@@ -26,9 +26,27 @@
       ?>
 
       <?php
-      if (has_nav_menu('secondary_navigation')) :
-        wp_nav_menu(['theme_location' => 'secondary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav navbar-right']);
-      endif;
+        // checks to see if the user is logged in and display membership menu, otherwise it is login and signup
+        if(is_user_logged_in() ) {
+          if (has_nav_menu('member_navigation')) :
+            wp_nav_menu(['theme_location' => 'member_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav navbar-right']);
+          endif;
+        } else { ?>
+            <ul class="nav navbar-nav navbar-right navbar-non-member">
+                <hr>
+
+                <li>
+                    <p class="navbar-btn">
+                        <a class="btn btn-success" href="<?php echo home_url(); ?>/membership-account/membership-levels/"><span class="glyphicon glyphicon-plus-sign"></span> Sign Up</a>
+                    </p>
+                </li>
+                <li>
+                    <p class="navbar-btn">
+                        <a class="btn btn-default" href="<?php echo home_url(); ?>/login"><span class="glyphicon glyphicon-education"></span> Login</a>
+                    </p>
+                </li>
+            </ul>
+        <?php }
       ?>
     </nav>
   </div>

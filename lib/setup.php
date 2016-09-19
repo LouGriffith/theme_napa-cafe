@@ -32,7 +32,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'secondary_navigation' => __('Secondary Navigation', 'sage')
+    'secondary_navigation' => __('Secondary Navigation', 'sage'),
+    'member_navigation' => __('Member Navigation', 'sage'),
+    'non-member_navigation' => __('Non-Member Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -74,6 +76,15 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Student', 'sage'),
     'id'            => 'sidebar-student',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Lesson', 'sage'),
+    'id'            => 'sidebar-lesson',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
