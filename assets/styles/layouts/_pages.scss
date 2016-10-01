@@ -8,22 +8,35 @@
 		@media (max-width: $screen-sm-max) {
 				transform: translateX(-300px);
 		}
-	}	
+	}
 }
 
+.background-img{
+	height: 300px;
+	overflow: hidden;
+
+	img{
+		width: 100%;
+    	height: auto;
+	}
+}
 
 .wrap.container{
 	position: relative;
   	transform: translateX(0);
   	transition: .5s ease all;
-  	margin-top: 6em; 
-  	
+  	margin-top: 6em;
+
 	.toggled &{
   		transform: translateX(300px);
 
   		@media (max-width: $screen-sm-max) {
   			transform: translateX(-300px);
 		}
+	}
+
+	&.has-image{
+  		margin-top: 0;
 	}
 }
 
@@ -53,4 +66,19 @@
 .main{
 	float: left;
 	width: 100%;
+}
+
+body.admin-bar{
+	position: static;
+
+
+	@media (max-width: $screen-sm-max) {
+    	margin-top: 46px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	#wpadminbar {
+	    position: fixed;
+	}
 }

@@ -2,11 +2,15 @@
 	position: fixed;
 	top: 0px; 
 	z-index: 999;
-	top: 1em;
+	top: 2em;
 
     @media (max-width: $screen-sm-max) {
     	top: 0;
     	width: 100%;
+
+    	.admin-bar &{
+			top: 46px;
+		}
 	}
 
 	.brand{
