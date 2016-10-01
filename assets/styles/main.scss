@@ -15,7 +15,10 @@
 @import "components/forms";
 @import "components/grid";
 @import "components/select2";
+@import "components/pmpro";
 @import "components/wp-classes";
+// @import "components/gravity-forms";
+@import "components/woocommerce";
 
 @import "layouts/header";
 @import "layouts/sidebar";
@@ -25,3 +28,5 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/theme-my-login";
+

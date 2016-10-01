@@ -52,3 +52,10 @@ function agentwp_dequeue_stylesandscripts() {
     wp_deregister_script('select2');
   }
 }
+
+// sets menu order for LearnDash courses
+function learndash_courses_order_attribute() {
+  add_post_type_support( 'sfwd-courses', 'page-attributes' );
+}
+add_action( 'init', 'learndash_courses_order_attribute' );
+?>
