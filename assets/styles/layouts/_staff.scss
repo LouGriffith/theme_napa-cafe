@@ -1,0 +1,52 @@
+// Staff
+.staff-list{
+	@include make-row;
+	margin-top: 0;
+	margin-bottom: 2em;
+
+	header{
+		@include make-lg-column(12);
+		text-align: center;
+		margin: 2em 0;
+	}
+}
+
+.staff-profile{
+	@include make-lg-column(4);
+
+	.profile-card{
+		background: #ddd;
+		border-radius: .25em;
+
+		@media (max-width: $screen-sm-max) {
+			margin: 1em 0;
+		}
+	}
+
+	.profile-pic{
+		text-align: center;
+
+		img{
+			width: 150px;
+			height: 150px;
+    		border-radius: 50%;
+    		margin: 1.5em;
+		}
+	}
+
+	.profile-info{
+		background: #ededed;
+		padding: 1.5em 1em;
+		border-bottom-left-radius: .25em;
+		border-bottom-right-radius: .25em;
+
+		.staff-name{
+			font-size: 1.5em;
+			margin: 0;
+		}
+
+		.staff-postion{
+			font-family: 'Lato', serif;
+		}
+	}
+}

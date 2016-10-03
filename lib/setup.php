@@ -78,6 +78,10 @@ function widgets_init() {
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
+require_once(get_template_directory() . '/lib/custom-post-types.php'); // load Foundation specific functions like top-bar
+require_once(get_template_directory() . '/lib/custom-taxonomy.php'); // load Foundation specific functions like top-bar
+require_once(get_template_directory() . '/lib/custom-fields.php'); // load Foundation specific functions like top-bar
+
 /**
  * Determine which pages should NOT display the sidebar
  */
