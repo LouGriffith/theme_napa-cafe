@@ -13,6 +13,7 @@
 
 .staff-profile{
 	@include make-lg-column(4);
+	margin-bottom: 3em;
 
 	.profile-card{
 		background: #ddd;

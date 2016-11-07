@@ -1,0 +1,13 @@
+.site-footer{
+	@include make-row();
+	color: #fff;
+	background: #333;
+}
+
+.footer-left{
+	@include make-md-column(6);
+}
+
+.footer-right{
+	@include make-md-column(6);
+}

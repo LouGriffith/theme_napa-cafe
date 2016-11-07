@@ -1,7 +1,7 @@
-<div id="events" style="">
+<div id="events" class="widget">
 	
 	<div class="event-wrapper">
-		<h2>Your Invited</h2>
+		<h3>Your Invited</h3>
 		<?php 
 			$args = array( 'post_type' => 'event', 'posts_per_page' => 4 );
 			$loop = new WP_Query( $args ); ?>

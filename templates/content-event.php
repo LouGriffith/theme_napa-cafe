@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
 
-	<div class="event-desc wrap container">
+	<div class="event-desc">
 		
 		<div class="event-details">
 			<span class="event-desc"><?php the_field('event_description'); ?></span>

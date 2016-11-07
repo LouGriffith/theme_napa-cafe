@@ -1,7 +1,18 @@
+#events{
+	@include make-row();
+	max-width: 700px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 1em;
+	margin-top: 1em;
+}
+
 // Event
 .event-list{
-	@include make-lg-column(8);
-	@include make-lg-column-offset(2);
+	padding: 1em 2em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
 	ul{
 		list-style: none;
@@ -12,6 +23,10 @@
 	li{
 		padding: 1em 1em 2em; 
 		border-bottom: 1px solid #ddd;
+
+		&:last-child{
+			border-bottom: 0px solid #fff;
+		}
 	}
 
 	h2{
@@ -40,85 +55,130 @@
 	}
 }
 
-.single-event{
+.single-event .page-header{
+	padding: 16em 0 0;
+}
 
-	.featured-image{
-		position: relative;
+// .event-bar{
+// 	@include make-lg-column(10);
+// 	z-index: 400;
+// 	background: rgba(255, 255, 255, .9);
+// 	border-bottom: 2px solid $brand-primary;
 
-		.page-header{
-			position: absolute;
-			bottom: 0;
-			max-width: 900px;
-			width: 100%;
-			border: 0;
-			margin: 0;
-			background: rgba(255, 255, 255, .9);
-			border-bottom: 2px solid $brand-primary;
+// 	@media (max-width: $screen-sm-max) {
+// 		background: none;
+// 	}
+// }
 
-			@media (max-width: $screen-sm-max) {
-				position: relative;
-			}
-		}
+// .event-info{
+// 	@include make-lg-column(9);
+// 	position: relative;
+// 	z-index: 400;
 
-		.event-info{
-			@include make-lg-column(9);
+// 	@media (max-width: $screen-sm-max) {
+// 		text-align: center;
+// 	}
 
-			@media (max-width: $screen-sm-max) {
-				text-align: center;
-			}
+// 	h1{
+// 		font-size: 2.25em;
+// 		margin: 1.25em 0 0;
+// 		padding: 0;
+// 		color: #333;
+// 		text-align: left;
 
-			h1{
-				font-size: 2.25em;
-				margin: 1.25em 0 0;
-			}
+// 		@media (max-width: $screen-sm-max) {
+// 			text-align: center;
+// 		}
+// 	}
 
-			.event-date{
-				font-family: 'Lato', serif;
-				display: inline-block;
-			}
-		}
+// 	.event-date{
+// 		font-family: 'Lato', serif;
+// 		display: inline-block;
+// 	}
+// }
 
-		.event-actions{
-			margin-top: 1em;
-			padding: 1em;
-			border-left: 1px solid #ddd;
-			@include make-lg-column(3);
+// .event-actions{
+// 	margin-top: 1em;
+// 	padding: 1em;
+// 	border-left: 1px solid #ddd;
+// 	@include make-lg-column(3);
+// 	text-align: center;
+
+// 	@media (max-width: $screen-sm-max) {
+// 		border-left: 0px solid #ddd;
+// 	}
+
+// 	.ticket-price{
+// 	}
+
+// 	.dollar-symbol{
+// 		font-size: .75em;
+// 	}
+
+// 	.ticket-ammount{
+// 		font-size: 1.25em;
+// 		font-weight: bold;
+// 	}
+
+// 	.ticket-per{
+// 		font-family: 'Lato', serif;
+// 		font-style: italic;
+// 		font-size: .75em;
+// 	}
+
+// 	.ticket-includes{
+// 		font-family: 'Lato', serif;
+// 		font-style: italic;
+// 		font-size: .75em;
+// 	}
+
+// 	.btn{
+// 		margin-top: .5em;
+// 		font-size: 1.25em;
+// 	}
+// }
+
+.event-bar{
+	@include make-lg-column(12);
+	position: relative;
+	z-index: 400;
+	text-align: left;
+	color: #ddd;
+	border-bottom: 2px solid $brand-primary;
+	padding: 0;
+	margin-top: 1em;
+
+	h1{
+		text-align: left;
+		padding: 0;
+
+		@media (max-width: $screen-sm-max) {
 			text-align: center;
-
-			@media (max-width: $screen-sm-max) {
-				border-left: 0px solid #ddd;
-			}
-
-			.ticket-price{
-			}
-
-			.dollar-symbol{
-				font-size: .75em;
-			}
-
-			.ticket-ammount{
-				font-size: 1.25em;
-				font-weight: bold;
-			}
-
-			.ticket-per{
-				font-family: 'Lato', serif;
-				font-style: italic;
-				font-size: .75em;
-			}
-
-			.ticket-includes{
-				font-family: 'Lato', serif;
-				font-style: italic;
-				font-size: .75em;
-			}
-
-			.btn{
-				margin-top: .5em;
-				font-size: 1.25em;
-			}
+			font-size: 2em;
+			margin-bottom: .5em;
 		}
 	}
+
+	@media (max-width: $screen-sm-max) {
+		text-align: center;
+		margin-top: 4em;
+	}
+}
+
+.event-info{
+	@include make-lg-column(7);
+	padding-top: 1em;
+	padding-bottom: 1em;	
+}
+
+.event-actions{
+	@include make-lg-column(5);	
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.ticket-price{
+	padding: 0 0 .5em;
 }
 
 .event-details{

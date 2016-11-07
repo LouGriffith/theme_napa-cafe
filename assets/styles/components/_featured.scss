@@ -1,0 +1,52 @@
+#featured{
+		@include make-row();
+		max-width: 700px;
+		margin: 0 auto;
+		background: #fff;
+		padding: 1em;
+		margin-top: 1em;
+
+		.feature-wrapper{
+			margin: 4em 2em;
+			padding: 4em;
+			border: 1px solid #fff;
+			text-align: center;
+
+
+			@media (max-width: $screen-sm-max) {
+				margin: 2em;
+				padding: 2em;
+			}
+		}
+
+		h2{
+			color: #fff;
+			margin-bottom: 1em;
+
+
+			@media (max-width: $screen-sm-max) {
+				margin-bottom: .5em;
+			}
+		}
+
+		.featured-desc{
+			@include make-lg-column(12);
+			color: #fff;
+			padding: 0;
+			margin-bottom: 1em;
+			display: block;
+		}
+
+
+
+		 a.btn.btn-default{
+		 	background: none;
+		 	color: #fff;
+
+		 	&:hover{
+		 		background: #fff;
+		 		color: #333;
+		 	}
+		 }
+
+	}

@@ -98,6 +98,7 @@
   }
   
   $('[data-toggle="offcanvas"]').click(function () {
+        $('header').toggleClass('toggled');
         $('#wrapper').toggleClass('toggled');
   });
 

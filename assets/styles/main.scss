@@ -9,8 +9,10 @@
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
+@import "components/featured";
 @import "components/grid";
 @import "components/logo";
+@import "components/open-table";
 @import "components/sidebar-nav";
 @import "components/wp-classes";
 
@@ -21,8 +23,10 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
+@import "layouts/homepage";
 @import "layouts/event";
 @import "layouts/fd_menu";
 @import "layouts/staff";
 
 @import "layouts/list-pages";
+@import "layouts/list-posts";
