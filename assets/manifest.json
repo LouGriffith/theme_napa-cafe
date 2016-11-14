@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://napacafe2016.lou:8888"
+    "devUrl": "http://napacafe.lou:8888/2016/"
   }
 }
